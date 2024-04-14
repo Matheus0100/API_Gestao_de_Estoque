@@ -1,4 +1,25 @@
-dotnet ef migrations add AuthInitial --context NetDevPack.Identity.Data.NetDevPackAppDbContext --project C:\Users\mathe\Desktop\GestaoEstoqueAPI\GestaoEstoque\GestaoEstoque.API\GestaoEstoque.API.csproj
+Default configuration:
 
+dotnet ef migrations add Initial --context NetDevPackAppDbContext --project src\Samples\AspNetCore.Jwt.Sample\AspNetCore.Jwt.Sample.csproj
+dotnet ef database update --context NetDevPackAppDbContext --project src\Samples\AspNetCore.Jwt.Sample\AspNetCore.Jwt.Sample.csproj
 
-dotnet ef database update --context NetDevPack.Identity.Data.NetDevPackAppDbContext --project C:\Users\mathe\Desktop\GestaoEstoqueAPI\GestaoEstoque\GestaoEstoque.API\GestaoEstoque.API.csproj
+Custom configuration:
+
+dotnet ef migrations add Initial --context MyIdentityContext --project src\Samples\AspNetCore.Jwt.Sample\AspNetCore.Jwt.Sample.csproj
+dotnet ef database update --context MyIdentityContext --project src\Samples\AspNetCore.Jwt.Sample\AspNetCore.Jwt.Sample.csproj 
+
+Example: 
+
+dotnet ef migrations add Initial --context NetDevPack.Identity.Data.NetDevPackAppDbContext --project C:\Users\[username]\Desktop\GestaoEstoqueAPI\GestaoEstoque\GestaoEstoque.API\GestaoEstoque.API.csproj
+dotnet ef database update --context NetDevPack.Identity.Data.NetDevPackAppDbContext --project C:\Users\[username]\Desktop\GestaoEstoqueAPI\GestaoEstoque\GestaoEstoque.API\GestaoEstoque.API.csproj
+
+And
+
+dotnet ef migrations add Initial --context EstoqueContextDB
+dotnet ef database update --context EstoqueContextDB
+
+To see all contexts of your project, run this code in command prompt:
+
+dotnet ef dbcontext list
+
+Thanks :)
