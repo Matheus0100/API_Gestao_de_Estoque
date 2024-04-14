@@ -1,0 +1,4 @@
+dotnet ef migrations add AuthInitial --context NetDevPack.Identity.Data.NetDevPackAppDbContext --project C:\Users\mathe\Desktop\GestaoEstoqueAPI\GestaoEstoque\GestaoEstoque.API\GestaoEstoque.API.csproj
+
+
+dotnet ef database update --context NetDevPack.Identity.Data.NetDevPackAppDbContext --project C:\Users\mathe\Desktop\GestaoEstoqueAPI\GestaoEstoque\GestaoEstoque.API\GestaoEstoque.API.csproj
