@@ -1,12 +1,12 @@
 ﻿using GestaoEstoque.API.Interfaces;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Configuration;
 
 namespace GestaoEstoque.API.Models
 {
     public class Produto : IProduto
     {
-        [Required]
         public int ID { get; set; }
         [Required]
         [StringLength(100,MinimumLength = 1)]

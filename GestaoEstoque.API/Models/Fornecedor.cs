@@ -1,11 +1,11 @@
 ﻿using GestaoEstoque.API.Interfaces;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GestaoEstoque.API.Models
 {
     public class Fornecedor : IFornecedor
     {
-        [Required]
         public int ID { get; set; }
         [Required]
         [StringLength(200)]

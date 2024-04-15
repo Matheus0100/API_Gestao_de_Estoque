@@ -63,8 +63,9 @@ namespace GestaoEstoque.API.Data
             modelBuilder.Entity<Fornecedor>().ToTable("Fornecedores");
 
             base.OnModelCreating(modelBuilder);
+
             //no console do gerenciador de pacotes utilizar os comandos abaixo:
-            //add-migration Initial
+            //add-migration Initial -context EstoqueContextDB
             //update-database
         }
     }

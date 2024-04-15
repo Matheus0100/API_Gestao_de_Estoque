@@ -23,9 +23,9 @@ namespace GestaoEstoque.API.Controllers
         {
             _context = context;
         }
-
-        [Authorize]
+        
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Fornecedor>>> GetFornecedores()
         {
             if (_context.Fornecedores == null)
@@ -91,6 +91,7 @@ namespace GestaoEstoque.API.Controllers
             {
                 return Problem("Erro: Conjunto de entidades nulo, favor contatar o desenvolvedor.");
             }
+
             _context.Fornecedores.Add(fornecedor);
             await _context.SaveChangesAsync();
 
